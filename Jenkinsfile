@@ -36,7 +36,6 @@ pipeline {
 					docker stop %container_id%
 					docker rm %container_id%
 				"""
-				}
             }
         }		
     }

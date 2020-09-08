@@ -24,7 +24,6 @@ pipeline {
 				bat """
 				python tests\\e2e.py 
 				echo %errorlevel%
-				// IF %errorlevel% NEQ 0 ( exit /b %errorlevel% ) 
 				"""
             }
         }

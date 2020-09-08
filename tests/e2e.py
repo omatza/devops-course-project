@@ -36,9 +36,9 @@ def main_function():
     :return: exit code -1 if test failed. 0 if passed.
     """
     #get the address from user as argument somehow ?
-    #main_function("192.168.99.100:8777")
+    #main_function("localhost:8777")
 
-    if not test_scores_service("localhost:8777"):  #TODO: add dynamic addrress
+    if not test_scores_service("192.168.99.100:8777"):  #TODO: add dynamic addrress
         return -1
 
     return 0

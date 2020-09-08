@@ -1,0 +1,8 @@
+version: '3'
+services: 
+  web: 
+    build: "."
+    image: game_image
+    container_name: game_server
+    ports: 
+      - "8777:8777"

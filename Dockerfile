@@ -8,6 +8,7 @@ WORKDIR ~/
 #add my python scipt to the docker file
 ADD *.py ./
 ADD Scores.txt ./
+COPY requrments.txt ./
 
 RUN pip install -r requrments.txt
 

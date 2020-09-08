@@ -32,7 +32,7 @@ pipeline {
             steps {
                 echo 'Finalize....'
 				script {
-					docker rm $(docker stop $(docker ps -q --filter name=game_server))
+					//docker rm $(docker stop $(docker ps -q --filter name=game_server))
 				}
             }
         }		

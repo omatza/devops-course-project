@@ -31,9 +31,9 @@ pipeline {
         stage('Finalize') {
             steps {
                 echo 'Finalize....'
-				bat """
-				docker rm $(docker stop $(docker ps -q --filter name=game_server))
-				"""
+				script {
+					docker rm $(docker stop $(docker ps -q --filter name=game_server))
+				}
             }
         }		
     }

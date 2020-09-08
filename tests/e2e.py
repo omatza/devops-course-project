@@ -38,7 +38,7 @@ def main_function():
     #get the address from user as argument somehow ?
     #main_function("localhost:8777")
 
-    if not test_scores_service("192.168.99.100:8777"):  #TODO: add dynamic addrress
+    if not test_scores_service("http://192.168.99.100:8777"):  #TODO: add dynamic addrress
         return -1
 
     return 0

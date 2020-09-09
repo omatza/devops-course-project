@@ -40,7 +40,7 @@ pipeline {
 	post {
 		failure {
 			echo "failure"
-			docker-compose down
+			bat docker-compose down
 		}
 	}
 }

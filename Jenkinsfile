@@ -31,11 +31,16 @@ pipeline {
             steps {
                 echo 'Finalize....'
 				bat """
-					set container_id = docker ps -q --filter name=game_server
-					docker stop %container_id%
-					docker rm %container_id%
+				docker-compose down
 				"""
             }
         }		
     }
+	
+	post {
+		failure {
+			echo "failure"
+			docker-compose down
+		}
+	}
 }

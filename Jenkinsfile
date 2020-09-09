@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Build..'
 				bat """
-				docker-compose up --build -d
+				docker-compose up --build -d --no-ansi 
 				"""
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Finalize....'
 				bat """
-				docker-compose down
+				docker-compose --no-ansi down
 				"""
             }
         }		
